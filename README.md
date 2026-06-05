@@ -7,10 +7,10 @@ I'm Ghazal a fresh Front-end student who is trying to learn and improve in web s
 
 ## 💬Information
 
--   🌐[Demo Project]()
+-   🌐[Demo Project](https://ghazalnabaeii-lab.github.io/After-sales-service/)
 -  💻Developed by Ghazal Nabaei
  -  🕒Date: 2026/06/06
- -  🔍Technologies Used - HTML , CSS , JS
+ -  🔍Technologies Used - HTML , CSS , JS ,TAILWIND
 ## 📸Screenshots
 <img width="1898" height="927" alt="Image" src="https://github.com/user-attachments/assets/fb2a9a87-5bba-4fc5-9c14-77783bca98ad" />
 
