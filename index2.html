@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *, *::before, *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+            body {
+                min-height:100vh;
+                background: rgb(19, 39, 81);
+            }
+    div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;flex-wrap: wrap;
+        gap: 200px;
+        >img{
+            width: 550px;
+            height: 100%;
+            border-radius: 50%;
+            transition: 3s ease-out;
+        }
+        >button{
+            width: 200px;
+            height: 50px;
+            color: rgb(255, 255, 255);
+            background-color: rgb(23, 110, 176);
+            border: 1px solid  rgb(161, 161, 161);
+            font-size: 40px;
+            }
+    }
+    </style>
+</head>
+
+<body>
+<div>
+    <img src="img/InShot_20260506_015106078.jpg" alt="">
+    <button>spin</button>
+</div>
+</body>
+<script>
+    const _img = document.querySelector('img')
+    const btn = document.querySelector('button')
+    flag = 0
+    btn.addEventListener('click',()=>{
+        let myRand = 0
+        if(!flag){
+            myRand = Math.floor(Math.random()*360)
+            _img.style.transform='rotate('+(myRand+720)+'deg)'
+            btn.innerText ='reset'
+            flag++
+            ////select gift////
+            let txt =''
+            switch(true){
+                case myRand >= -22.5 && myRand<= 22.5:txt ='100% 0ff';break;
+                case myRand >= 23 && myRand<= 68:txt ='75% off';break;
+                case myRand >= 69 && myRand<= 114 :txt ='10% off';break;
+                case myRand >= 115 && myRand<= 160:txt ='90% off';break;
+                case myRand >= 161 && myRand<= 206:txt ='5% off';break;
+                case myRand >= 207 && myRand<= 252:txt ='50% off';break;
+                case myRand >= 253 && myRand<= 298:txt ='40% off';break;
+                case myRand >= 299 && myRand< 344:txt ='20% off';break;
+            }
+            setTimeout(()=>{
+                alert('you won'+txt)
+                
+            },3040);
+        }else{
+            _img.style.transform='rotate(0deg)'
+            btn.innerText='spin'
+            btn.setAttribute('disabled','disabled')
+            flag = 0
+        }
+        setTimeout(()=>{
+            btn.removeAttribute('disabled')
+        },3000)
+    })
+</script>
+</html>

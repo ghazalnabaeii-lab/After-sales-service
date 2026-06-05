@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@layer base{
+    body{
+        font-family: ghazal;
+    }
+    @font-face {
+        font-family: ghazal;
+        src: url(../font/font.ttf);
+    }
+}
+@layer utilities{
+    .row{
+        @apply flex  w-full 
+    }
+}
+@layer components{
+    .btnRed{
+        @apply uppercase w-fit h-[50px]  rounded-[50px] px-[25px] flex items-center bg-red-800 text-white gap-2.5 hover:bg-blue-950 hover:-translate-y-1 hover:border hover:border-amber-50 duration-500
+    }
+    .underlinemenu{
+        @apply opacity-0 absolute bottom-0 left-0 flex w-full h-[3px] -skew-x-[25deg] justify-between before:content-[''] before:flex before:w-[75%] before:h-full before:bg-white after:content-[''] after:flex after:bg-red-800  after:w-[20%] after:h-full
+    }
+}
+@theme{
+    --animate-wiggle:wiggle 3s ease-in-out infinite;
+    @keyframes wiggle{
+        0%
+        100%{
+            transform:translateY(0)
+        }
+        50%{
+            transform:translateY(20px)
+            
+        }
+    }
+}
